@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Master Implementation -->
-    <title>Agência TOOC | Branding, Design de Embalagens & Estratégia para o Agro</title>
+    <title>
+      Agência TOOC | Branding, Design de Embalagens & Estratégia para o Agro
+    </title>
     <meta
       name="description"
       content="Branding, design de embalagens, landing pages e estratégia para empresas do agro. Criamos projetos que comunicam valor e geram percepção premium."
@@ -16,33 +18,56 @@
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://agenciatooc.com.br/" />
-    <meta property="og:title" content="Agência TOOC | Branding, Design de Embalagens & Estratégia para o Agro" />
-    <meta property="og:description" content="Branding, design de embalagens, landing pages e estratégia para empresas do agro. Criamos projetos que comunicam valor e geram percepção premium." />
-    <meta property="og:image" content="https://res.cloudinary.com/dud7265zq/image/upload/v1780517869/TOOC/21_z0j1f5.jpg" />
+    <meta
+      property="og:title"
+      content="Agência TOOC | Branding, Design de Embalagens & Estratégia para o Agro"
+    />
+    <meta
+      property="og:description"
+      content="Branding, design de embalagens, landing pages e estratégia para empresas do agro. Criamos projetos que comunicam valor e geram percepção premium."
+    />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dud7265zq/image/upload/v1780517869/TOOC/21_z0j1f5.jpg"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://agenciatooc.com.br/" />
-    <meta name="twitter:title" content="Agência TOOC | Branding, Design de Embalagens & Estratégia para o Agro" />
-    <meta name="twitter:description" content="Branding, design de embalagens, landing pages e estratégia para empresas do agro. Criamos projetos que comunicam valor e geram percepção premium." />
-    <meta name="twitter:image" content="https://res.cloudinary.com/dud7265zq/image/upload/v1780517869/TOOC/21_z0j1f5.jpg" />
+    <meta
+      name="twitter:title"
+      content="Agência TOOC | Branding, Design de Embalagens & Estratégia para o Agro"
+    />
+    <meta
+      name="twitter:description"
+      content="Branding, design de embalagens, landing pages e estratégia para empresas do agro. Criamos projetos que comunicam valor e geram percepção premium."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dud7265zq/image/upload/v1780517869/TOOC/21_z0j1f5.jpg"
+    />
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Agência TOOC",
-      "description": "Branding, Design & Estratégia para o Agro",
-      "logo": "https://res.cloudinary.com/dud7265zq/image/upload/v1780226352/logo-white_ktq2zn.webp",
-      "url": "https://agenciatooc.com.br",
-      "sameAs": [
-        "https://www.instagram.com/agenciatooc",
-        "https://www.linkedin.com/company/ag%C3%AAnciatooc"
-      ],
-      "areaServed": "Brasil",
-      "serviceType": ["Branding Agro", "Packaging Design", "Landing Pages", "Design Agro"]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Agência TOOC",
+        "description": "Branding, Design & Estratégia para o Agro",
+        "logo": "https://res.cloudinary.com/dud7265zq/image/upload/v1780226352/logo-white_ktq2zn.webp",
+        "url": "https://agenciatooc.com.br",
+        "sameAs": [
+          "https://www.instagram.com/agenciatooc",
+          "https://www.linkedin.com/company/ag%C3%AAnciatooc"
+        ],
+        "areaServed": "Brasil",
+        "serviceType": [
+          "Branding Agro",
+          "Packaging Design",
+          "Landing Pages",
+          "Design Agro"
+        ]
+      }
     </script>
 
     <!-- Favicon -->
@@ -85,7 +110,7 @@
           </picture>
         </a>
 
-        <nav class="desktop-nav">
+        <nav class="desktop-nav" id="desktopNavRef">
           <ul class="nav-links">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
@@ -93,6 +118,15 @@
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#contato">Contato</a></li>
+            <li class="mobile-only-cta">
+              <button
+                type="button"
+                class="btn btn-primary cta-modal-trigger"
+                aria-label="Solicitar Diagnóstico"
+              >
+                Solicitar Diagnóstico
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -101,7 +135,12 @@
         </button>
 
         <!-- Botão do menu responsivo (Mobile) -->
-        <button class="hamburger-menu" aria-label="Abrir Menu Mobile">
+        <button
+          class="hamburger-menu"
+          aria-label="Abrir Menu Mobile"
+          aria-expanded="false"
+          aria-controls="desktopNavRef"
+        >
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
@@ -132,7 +171,10 @@
               >
                 Solicitar Diagnóstico Estratégico
               </button>
-              <a href="#projetos" class="btn btn-hero-secondary" aria-label="Ver Projetos de Branding e Packaging da TOOC"
+              <a
+                href="#projetos"
+                class="btn btn-hero-secondary"
+                aria-label="Ver Projetos de Branding e Packaging da TOOC"
                 >Ver Projetos</a
               >
             </div>
@@ -2384,7 +2426,11 @@
               Gostou desta construção estratégica?
             </p>
             <!-- Trigger reutilizando a classe do modal de lead -->
-            <button type="button" class="btn btn-primary case-modal-cta-btn" aria-label="Solicitar Diagnóstico Estratégico de Projeto">
+            <button
+              type="button"
+              class="btn btn-primary case-modal-cta-btn"
+              aria-label="Solicitar Diagnóstico Estratégico de Projeto"
+            >
               Solicitar Diagnóstico Estratégico
             </button>
           </div>

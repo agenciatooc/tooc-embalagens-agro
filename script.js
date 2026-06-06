@@ -18,16 +18,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-links a");
 
   if (hamburger && desktopNav) {
+    const closeMenu = () => {
+      hamburger.classList.remove("active");
+      desktopNav.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    };
+
     hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
+      const isActive = hamburger.classList.toggle("active");
       desktopNav.classList.toggle("active");
+      hamburger.setAttribute("aria-expanded", isActive ? "true" : "false");
+
+      if (isActive) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
     });
 
     navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        desktopNav.classList.remove("active");
-      });
+      link.addEventListener("click", closeMenu);
+    });
+
+    // Check if there's a CTA inside the menu to also trigger close
+    const mobileCTAs = desktopNav.querySelectorAll(".cta-modal-trigger");
+    mobileCTAs.forEach((btn) => {
+      btn.addEventListener("click", closeMenu);
     });
   }
 
@@ -74,8 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
   styleBlock.textContent = `
         .reveal-element {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
             will-change: opacity, transform;
             pointer-events: auto !important;
         }
